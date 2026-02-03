@@ -18,7 +18,7 @@ app.use("/auth", authRouter);
 app.use("/notes", notesRouter);
 
 app.use("/", (req, res) => {
-  res.send("Welcome to ABS");
+  res.send("Welcome to ABS Ahmed Abdelhakem");
 });
 
 // error handler
