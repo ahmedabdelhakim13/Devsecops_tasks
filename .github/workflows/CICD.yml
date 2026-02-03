@@ -17,11 +17,11 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          script: |
-            docker stop backend || true
-            docker rm backend || true
-            docker build -t my-backend .
-            sudo docker run -d -p 8000:8000 --name backend my-backend
+          # script: |
+          #   docker stop backend || true
+          #   docker rm backend || true
+          #   docker build -t my-backend .
+          #   sudo docker run -d -p 8000:8000 --name backend my-backend
 
 
 
