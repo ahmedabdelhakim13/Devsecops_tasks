@@ -23,7 +23,8 @@ jobs:
             docker stop backend || true
             docker rm backend || true
             docker build -t my-backend .
-            docker run -d -p 8000:8000 --backend_name backend my-backend
+            sudo docker run -d -p 8000:8000 --name backend my-backend
+
 
 
 
