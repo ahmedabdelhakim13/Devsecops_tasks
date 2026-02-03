@@ -31,8 +31,6 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
-            docker stop my-backend || true
-            docker rm my-backend || true
             docker run -d --name my-backend -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
 
 
