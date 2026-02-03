@@ -18,7 +18,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            git pull origin main
+            cd /home/ahmed/Final_project/Devsecops_tasks/Lab4
+            git pull origin mai
             docker stop backend || true
             docker rm backend || true
             docker build -t my-backend .
