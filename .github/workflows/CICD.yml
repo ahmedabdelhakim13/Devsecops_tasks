@@ -30,8 +30,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
-            docker run -d --name my-backend -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
+            sudo docker run -d --name my-backend -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/my-backend:latest
 
 
 
